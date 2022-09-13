@@ -4,17 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Duck5 {
 
-    private final Egg6 egg;
+public class Egg6 {
 
-
-    public Duck5(Egg6 egg) {
-        this.egg = egg;
-    }
-
+    private Needle7 needle;
+    
+    @Autowired
+    public void setNeedle(Needle7 needle){
+    this.needle = needle;
+}
     @Override
     public String toString() {
-        return ", в утке яйцо " + egg.toString();
+        return ", в яйце иголка " + needle.toString();
     }
 }
